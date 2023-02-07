@@ -1,11 +1,12 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class Chateaux extends AbstractController
+class ChateauxController extends AbstractController
 {
     const CHATEAUX = [
         ['id' => 0, 'titre' => 'Chateau de Tour',
@@ -25,6 +26,7 @@ class Chateaux extends AbstractController
              sur la commune de Chenonceaux, dans le département d\'Indre-et-Loire en région Centre-Val de Loire.',
             'url' => 'http://2.bp.blogspot.com/-1jh7lmq4wig/UM4en3RjQrI/AAAAAAAAAMI/wpUeRCZQWEc/s1600/Chenonceau+(02).jpg']
     ];
+
     /**
      * @Route("/chateaux/{id}", name="chateaux")
      */
