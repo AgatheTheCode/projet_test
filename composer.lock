@@ -2166,20 +2166,20 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v6.2.10",
+            "version": "v6.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "2f886f4b31f23c76496901acaedfedb6936ba61f"
+                "reference": "dcfac94d6bdcf95c126e8ccac2104917c7c8f135"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/2f886f4b31f23c76496901acaedfedb6936ba61f",
-                "reference": "2f886f4b31f23c76496901acaedfedb6936ba61f",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/dcfac94d6bdcf95c126e8ccac2104917c7c8f135",
+                "reference": "dcfac94d6bdcf95c126e8ccac2104917c7c8f135",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.0|^2.0",
+                "doctrine/annotations": "^1.0",
                 "php": ">=7.2.5",
                 "symfony/config": "^4.4|^5.0|^6.0",
                 "symfony/dependency-injection": "^4.4|^5.0|^6.0",
@@ -2237,10 +2237,11 @@
                 "controllers"
             ],
             "support": {
-                "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.2.10"
+                "issues": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/issues",
+                "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.2.9"
             },
             "abandoned": "Symfony",
-            "time": "2023-02-24T14:57:12+00:00"
+            "time": "2022-11-01T17:17:13+00:00"
         },
         {
             "name": "symfony/amqp-messenger",
