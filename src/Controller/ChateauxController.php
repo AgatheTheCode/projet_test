@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Castle;
+use App\Repository\CastleRepository;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -30,10 +33,21 @@ class ChateauxController extends AbstractController
     /**
      * @Route("/chateaux/{id}", name="chateaux")
      */
-    public function chateau(): Response
+    /**
+     * @Route("/chateaux", name="chateaux")
+     */
+    public function chateaux(): Response
     {
+        // Récupère le dépôt lié à la classe Castle
+        $repo = $this->getDoctrine()
+            ->getRepository(Castle::class);
+
+        // Exécute une requête SELECT
+        $castles = $repo->findAll();
+
+        // Utilisation du résultat
         return $this->render('chateaux.html.twig', [
-            'Chateaux' => self::CHATEAUX,
+            'chateaux' => $castles
         ]);
     }
 }
