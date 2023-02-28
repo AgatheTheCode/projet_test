@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Castle index{% endblock %}
+
+{% block body %}
+    <h1>Castle index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Picture</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for castle in castles %}
+            <tr>
+                <td>{{ castle.id }}</td>
+                <td>{{ castle.name }}</td>
+                <td>{{ castle.description }}</td>
+                <td><img src="{{ castle.picture }}"></td>
+                <td>
+                    <a href="{{ path('app_castle_show', {'id': castle.id}) }}">show</a>
+                    <a href="{{ path('app_castle_edit', {'id': castle.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_castle_new') }}">Create new</a>
+{% endblock %}

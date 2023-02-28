@@ -17,13 +17,10 @@
     <body>
     <nav>
         <a href="{{ path('home') }}">Accueil</a>
+        <a href="{{ path ('app_castle_index') }}">Index Crud</a>
         <a href="{{ path('apropos') }}">A Propos</a>
         <a href="{{ path('nombre', {id:1}) }}">Nombre 1</a>
         <a href="{{ path('nombre', {id:2}) }}">Nombre 2</a>
-        {% for element in Chateaux %}
-            <a href="{{ path('chateaux', {id:element.id}) }}"> Chateau {{ element.id }}</a>
-        {% endfor %}
-
     </nav>
         {% block body %}{% endblock %}
     </body>
