@@ -20,7 +20,7 @@ class CastleController extends AbstractController
             'castles' => $castleRepository->findAll(),
         ]);
     }
-
+    //formulaire d'ajout
     #[Route('/new', name: 'app_castle_new', methods: ['GET', 'POST'])]
     public function new(Request $request, CastleRepository $castleRepository): Response
     {
@@ -38,6 +38,11 @@ class CastleController extends AbstractController
             'castle' => $castle,
             'form' => $form,
         ]);
+        return static function (TwigConfig $twig) {
+            $twig->formThemes([
+                'bootstrap_5_layout.html.twig',
+                'form/my_theme.html.twig',
+            ]);};
     }
 
     #[Route('/{id}', name: 'app_castle_show', methods: ['GET'])]

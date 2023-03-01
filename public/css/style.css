@@ -1,0 +1,22 @@
+html{
+    background-color: #383838;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #d500ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #de53fb;
+    font-weight: bold;
+}
+a:active {
+    color: #fffdfd;
+    font-weight: bold;
+}
